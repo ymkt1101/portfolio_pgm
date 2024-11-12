@@ -201,12 +201,6 @@ header {
     border-collapse: collapse;
 }
 
-/* .profile_detail th {
-    width: 30%;
-    padding: 5px 0;
-    text-align: left;
-} */
-
 .profile_detail th {
     width: 30%;
     padding-right: 1rem;
@@ -407,7 +401,7 @@ button:active {
 }
 
 .modal {
-    top: 40vh;
+    top: 25vh;
     left: 0;
     right: 0;
     margin: 0 auto;
