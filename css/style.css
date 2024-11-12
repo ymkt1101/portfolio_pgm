@@ -438,9 +438,9 @@ button:active {
 }
 
 .preview_calendar {
-    width: 200px;
+    width: 260px;
     height: auto;
-    padding: 1rem;
+    margin: 1rem auto;
 }
 
 /*----- footer -----*/
