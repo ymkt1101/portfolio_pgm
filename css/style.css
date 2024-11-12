@@ -437,6 +437,11 @@ button:active {
     background-color: #736367;
 }
 
+.preview_calendar {
+    width: 200px;
+    height: auto;
+}
+
 /*----- footer -----*/
 footer {
     width: 100%;
