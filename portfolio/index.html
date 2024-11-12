@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わたべの部屋</title>
+    <meta name="description" content="webアプリケーションプログラマ養成科52期　わたべの自己紹介サイトです。">
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/icon/android-chrome-192x192.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- webフォント -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'nno0dtt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+
+<body>
+    <!-- ローディング画面 -->
+    <div class="loading">
+        <p class="loading_message color_br">Welcome</p>
+    </div>
+
+    <div id="nav" class="nav">
+        <ul class="nav_area">
+            <li><a class="nav_list color_br font-en" href="#profile">Profile</a></li>
+            <li><a class="nav_list color_br font-en" href="#favorite">Favorite</a></li>
+            <li><a class="nav_list color_br font-en" href="#work">Work</a></li>
+        </ul>
+    </div>
+
+    <header id="top">
+        <div class="logo">
+            <h1><img src="images/logo_3.png" alt="わたべのロゴ"></h1>
+        </div>
+        <hr class="nav_border">
+    </header>
+
+    <main>
+        <article id="profile" class="profile wrapper">
+            <div class="content_head">
+                <h2 class="content_ttl font-en">Profile</h2>
+                <p class="title_message font-jp">
+                    改めまして、自己紹介を
+                </p>
+            </div>
+            <table class="profile_detail">
+                <tr>
+                    <th class="color_br">名前</th>
+                    <td>渡部 慎江(わたべ まきえ) です</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <details>
+                            <summary class="profile_story color_br">名前の意味は？</summary>
+                            <p class="font-jp">「心優しい子になるように」<br> 意味はともかく、正しく読んでもらえる可能性は0。名字も大体間違われてしまうので、どう呼ばれても返事をします(笑)</p>
+                        </details>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th class="color_br">誕生日</th>
+                    <td class="font-jp">8月 9日</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <details>
+                            <summary class="profile_story color_br">同じ誕生日の有名人は？</summary>
+                            <p class="font-jp">黒柳 徹子、池上 彰。<br>私自身もそうですが、おしゃべりな人が多い誕生日なのでしょうか？</p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="color_br">星座</th>
+                    <td>しし座</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <details>
+                            <summary class="profile_story color_br">夏生まれは暑さに強い、と聞きますが？</summary>
+                            <p class="font-jp">・・・暑さも寒さも強くありません。</p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="color_br">血液型</th>
+                    <td>Ｏ型
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <details>
+                            <summary class="profile_story color_br">Ｏ型と言えば・・・</summary>
+                            <p class="font-jp">おおらかだと思います。<br>
+                                時々自制が効かないほどの「こだわり」が出てしまうのもＯ型だな、と自分で感じます。</p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="color_br">座右の銘</th>
+                    <td>「経験は自分を裏切らない」</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <details>
+                            <summary class="profile_story color_br">理由は？</summary>
+                            <p class="font-jp">どんな経験でも自分だけの財産になると思っています。<br>
+                                望んで出来る経験はとても幸せで、悪い経験も色々なことに気付かせてくれます。</p>
+                        </details>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="skill">
+                <div class="content_head">
+                    <h2 class="content_ttl font-en">Skill</h2>
+                    <p class="title_message font-jp">
+                        過去に使ったことがある、習得中のスキルです<br>
+                        載せられるスキルを増やすこと、「これ、使えます！」と言えるように精進する日々。
+                    </p>
+                </div>
+
+                <div class="skill_list font-jp">
+                    <ul class="skill_content skill_ms">
+                        <li class="skill">Word</li>
+                        <li class="skill">Excel(VBA)</li>
+                        <li class="skill">Power Point</li>
+                        <li class="skill">Access(VBA)</li>
+                    </ul>
+                    <ul class="skill_content skill_web">
+                        <li class="skill">HTML</li>
+                        <li class="skill">CSS</li>
+                        <li class="skill">JavaScript(学習中)</li>
+                        <li class="skill">PHP &amp; MySQL(学習中)</li>
+                        <li class="skill">Java(学習中)</li>
+                    </ul>
+                    <ul class="skill_content skill_app">
+                        <li class="skill">Photoshop</li>
+                        <li class="skill">Illustrator</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article id="favorite" class="favorite wrapper">
+            <div class="content_head">
+                <h2 class="content_ttl font-en">Favorite</h2>
+                <p class="title_message font-jp">
+                    好きな物・・・と考えて、思い浮かんだものを載せてみました。
+                </p>
+            </div>
+
+            <div class="favorite_modal">
+                <button class="open_btn" popovertarget="modal_strawberry" popovertargetaction="show">いちご</button>
+                <div id="modal_strawberry" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_strawberry" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">いちご</p>
+                        <p class="modal_comment">いちごのスイーツはもちろん、いちごそのものが大好きです。</p>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_Dickbruna" popovertargetaction="show">ディックブルーナ</button>
+                <div id="modal_Dickbruna" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_Dickbruna" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">ディックブルーナ</p>
+                        <p class="modal_comment">キャラクターは、ミッフィーも好きですが、ボリス(クマの男の子)やブラックベアの方が好きです。</p>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_house" popovertargetaction="show">自分の家</button>
+                <div id="modal_house" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_house" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">自宅</p>
+                        <p class="modal_comment">特にベッド。許されるなら、ずっとベッドにいたいくらい・・・</p>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_fortune" popovertargetaction="show">占い</button>
+                <div id="modal_fortune" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_fortune" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">占い</p>
+                        <p class="modal_comment">基本的にいいことしか信じません(笑)よくない結果は、なかったことに。2024年のしし座は絶好調！と聞いたのでそれは全力で信じてます</p>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_knit" popovertargetaction="show">編み物</button>
+                <div id="modal_knit" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_knit" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">編み物</p>
+                        <p class="modal_comment">秋になると「編みたい病」を毎年発症。毛糸も欲しい、道具も欲しい。毛糸なんて罪庫たっぷり過ぎて人生何回分もあったりします・・・。</p>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_pilates" popovertargetaction="show">ピラティス</button>
+                <div id="modal_pilates" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn font-en" popovertarget="modal_pilates" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">ピラティス</p>
+                        <p class="modal_comment">運動嫌いなのに前職を辞める直前、引きこもり防止対策で一念発起。レッスンはすごく楽しい、帰り道の私の脚は生まれたての小鹿・・・<br>
+                            通い始めて1年経過、姿勢が良くなったとわかり、続けていこうと張り切っています！</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="work" class="work wrapper">
+            <div class="content_head">
+                <h2 class="content_ttl font-en">Work</h2>
+                <p class="title_message font-jp">
+                    訓練校で学んだことを使って作成しました。
+                </p>
+            </div>
+            <div class="work_modal">
+                <button class="open_btn" popovertarget="modal_portfolio" popovertargetaction="show">ポートフォリオ</button>
+                <div id="modal_portfolio" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_portfolio" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">ポートフォリオ</p>
+                        <p class="modal_comment">このサイトです。訓練課題を改変しました<br>
+                            限られた中でどこまで出来るのか楽しみながら制作しました。
+                        </p>
+                        <p class="font-jp">使用言語：HTML/CSS</p>
+                        <a href=""></a>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_countup" popovertargetaction="show">日数計算</button>
+                <div id="modal_countup" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_countup" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">入力日から今日までの経過日数の計算</p>
+                        <p class="modal_comment">JavaScript追加課題を改変しました。<br>
+                            ちょっと遊び心を加えてみました。</p>
+                        <p class="font-jp">使用言語：HTML/CSS/JavaScript</p>
+                        <a href="">リンク</a>
+                    </div>
+                </div>
+
+                <button class="open_btn" popovertarget="modal_calendar" popovertargetaction="show">曜日計算</button>
+                <div id="modal_calendar" class="modal" popover="auto">
+                    <div class="inner-modal">
+                        <button class="close_btn" popovertarget="modal_calendar" popovertargetaction="hide">×</button>
+                        <p class="modal_ttl color_br">入力日の曜日を計算する</p>
+                        <p class="modal_comment font-jp">JavaScript追加課題。<br>
+                            特に理由はなかったのですが、興味本位でHTML部分をPHPで記述しました。</p>
+                        <p class="font-jp">使用言語：PHP/CSS/JavaScript</p>
+                        <a href="">リンク</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="copy-write color_or">
+            <small>&copy; 2024 watabe's Room</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>

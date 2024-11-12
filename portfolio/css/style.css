@@ -1,0 +1,496 @@
+@charset "utf-8";
+/*定型文*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scroll-padding-top: 130px;
+}
+
+body {
+    background-color: #fffaf2;
+    font-family: montserrat-alternates, dnp-shuei-mgothic-std sans-serif;
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+iframe {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: #333;
+}
+
+/*共通項目*/
+.wrapper {
+    max-width: 767px;
+    padding: 0 1rem;
+}
+
+.color_main {
+    color: #fffaf2;
+}
+
+.color_br {
+    color: #594c45;
+}
+
+.color_or {
+    color: #ffbe98;
+}
+
+.font-jp {
+    font-family: dnp-shuei-mgothic-std sans-serif;
+    font-weight: 300;
+}
+
+.font-en {
+    font-family: montserrat-alternates, sans-serif;
+    font-weight: 500;
+}
+
+/***** ローディング *****/
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #ffbe98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 2.5s 3.6s both;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading_message {
+    text-align: center;
+    font-size: clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);
+    font-weight: bold;
+    opacity: 0;
+    animation: logo_fade 3s 1s forwards;
+}
+
+@keyframes logo_fade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ----- header ----- */
+/* header { */
+#nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background: rgba(255, 250, 242, 0.7);
+    box-sizing: border-box;
+    z-index: 8;
+}
+
+header {
+    padding-bottom: 50px;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 auto 50px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.nav {
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.nav_area {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 3rem;
+}
+
+.nav_list {
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.3em;
+    transition: 0.3s;
+    transform: scale(1);
+}
+
+.nav_list:hover {
+    color: #ffbe98;
+    transform: scale(1.5);
+}
+
+.nav_border {
+    background-image: url(../images/block.svg);
+    background-repeat: repeat;
+    width: 90%;
+    height: 15px;
+    margin: 0 auto;
+    border: none;
+}
+
+/*----- content -----*/
+.profile,
+.favorite,
+.work {
+    width: 90%;
+    margin: 0 auto 100px;
+    padding: 50px 0;
+    border-radius: 50px;
+}
+
+.profile {
+    background-color: rgba(255, 190, 152, 0.3);
+}
+
+.favorite {
+    background-color: rgba(255, 190, 152, 0.5);
+}
+
+.youtube,
+.work {
+    background-color: rgba(255, 190, 152, 0.7);
+}
+
+.profile_detail {
+    width: 90%;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+/* .profile_detail th {
+    width: 30%;
+    padding: 5px 0;
+    text-align: left;
+} */
+
+.profile_detail th {
+    width: 30%;
+    padding-right: 1rem;
+}
+
+.profile_detail td {
+    line-height: 1.75;
+}
+
+.profile_story {
+    text-align: left;
+    padding-left: 2rem;
+    text-indent: 0;
+}
+
+/*コンテンツタイトル*/
+.content_head {
+    text-align: center;
+}
+
+.content_ttl {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px 40px;
+    color: #fffaf2;
+    border-radius: 50%;
+    background-color: #594c45;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.title_message {
+    padding: 50px 1rem;
+    margin: 0 auto;
+    color: #594c45;
+}
+
+/*profile*/
+summary {
+    position: relative;
+    font-weight: bold;
+    text-indent: 1rem;
+    padding-left: 20px; /* アイコン分の余白 */
+    cursor: pointer;
+    display: block;
+}
+summary::-webkit-details-marker {
+    display: none; /* 矢印を消す */
+}
+
+summary:before,
+summary:after {
+    position: absolute;
+    content: "";
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+summary:before {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #736367;
+}
+
+summary:after {
+    left: 6px;
+    width: 5px;
+    height: 5px;
+    border: 4px solid transparent;
+    border-left: 5px solid #fffaf2;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+details {
+    padding-bottom: 1rem;
+}
+
+details[open] summary:after {
+    transform: rotate(90deg); /* アイコンを回転 */
+    top: 5px;
+    left: 4px;
+}
+
+details p {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.message {
+    color: #736367;
+    font-weight: bold;
+    text-align: center;
+}
+
+/***** スキル *****/
+.skill {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.skill .content_head {
+    margin-top: 50px;
+}
+
+.skill_list {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.skill_content {
+    display: block;
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.skill_content li {
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 1.75;
+}
+
+.skill_web li {
+    color: #594c45;
+    background-color: #ffe2d1;
+    border: 2px solid #736367;
+}
+.skill_app li {
+    color: #fffaf2;
+    background-color: #736367;
+    border: 2px solid #bdb9b3;
+}
+.skill_ms li {
+    color: #fffaf2;
+    background-color: #bdb9b3;
+    border: 2px solid #736367;
+}
+
+/***** favorite *****/
+/*****  モーダル *****/
+.open_btn {
+    position: relative;
+    width: 100%;
+    height: 7vh;
+    font-weight: 600;
+    border: 1px solid #adadad;
+    color: #fffaf2;
+    background: rgba(89, 76, 69, 0.8);
+    cursor: pointer;
+    box-shadow: 2px 3px 1px -1px #929292;
+    border-radius: 20px;
+}
+
+.open_btn::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #fffaf2;
+    border-left: 3px solid #fffaf2;
+    top: 30%;
+    right: 10%;
+    transform: rotate(-135deg);
+}
+
+.favorite_modal,
+.work_modal {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.close_btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fffaf2;
+    background-color: #736367;
+    text-align: center;
+    line-height: 20px;
+}
+
+button:hover,
+button:active {
+    opacity: 0.7;
+}
+
+.modal {
+    top: 40vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 90%;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 0 10px 20px -5px #bdb9b3;
+}
+
+.inner-modal {
+    align-content: center;
+    padding: 2rem;
+    background: rgba(89, 76, 69, 0.2);
+}
+.modal::backdrop {
+    background: rgba(255, 250, 242, 0.4);
+}
+
+.modal_ttl {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal_comment {
+    color: #333;
+    margin: 0 0 16px;
+}
+
+/***** work *****/
+.work_area {
+    background-color: #736367;
+}
+
+/*----- footer -----*/
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #594c45;
+}
+
+.copy-write {
+    padding: 40px 0;
+}
+
+/* ***  PC版ここから  ***  */
+@media (min-width: 600px) {
+    #nav {
+        max-width: 100%;
+    }
+
+    .skill_content {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        text-align: center;
+        gap: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    /***** favorite *****/
+    .open_btn {
+        position: relative;
+        width: 45%;
+        height: 5vh;
+        font-weight: 600;
+        border: 1px solid #adadad;
+        color: #fffaf2;
+        background: rgba(89, 76, 69, 0.8);
+        cursor: pointer;
+        box-shadow: 2px 3px 1px -1px #929292;
+        border-radius: 20px;
+    }
+
+    .open_btn::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 3px solid #fffaf2;
+        border-left: 3px solid #fffaf2;
+        top: 30%;
+        right: 10%;
+        transform: rotate(-135deg);
+    }
+}
