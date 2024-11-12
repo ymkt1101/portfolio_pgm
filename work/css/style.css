@@ -1,0 +1,139 @@
+/*リセット*/
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: montserrat, hiragino-kaku-gothic-pron, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+
+body *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffbe98;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(24px, calc(12px + 3vw), 48px);
+}
+
+h2 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: clamp(16px, calc(8px + 2vw), 32px);
+}
+
+main {
+    height: calc(100vh - 135px);
+}
+
+section {
+    margin: 0 auto;
+}
+
+button {
+    font-size: 16px;
+}
+
+select,
+option {
+    font-size: 18px;
+    width: auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #594c45;
+}
+
+.copy-write {
+    padding: 20px 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1000px;
+}
+
+.form_content,
+#result_msg {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#result_msg {
+    font-weight: bold;
+}
+
+.color_or {
+    color: #ffbe98;
+}
+
+.font_red {
+    color: red;
+}
+
+.font_blk {
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+#birthday,
+#surprise,
+.timer {
+    font-size: clamp(24px, calc(13.5px + 2.625vw), 45px);
+}
+
+.surprise {
+    background-image: url(../images/surprise.png);
+    background-position: center;
+}
+
+#err_msg,
+.timer {
+    font-weight: bold;
+    text-align: center;
+}
+
+.timer span {
+    font-size: clamp(24px, calc(13.5px + 2.625vw), 45px);
+}
+
+.btn_area {
+    padding: 1rem;
+    text-align: center;
+}
+
+.pc_hidden {
+    display: hidden;
+}
+
+@media (max-width: 450px) {
+    .pc_hidden {
+        display: block;
+    }
+}

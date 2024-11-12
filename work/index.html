@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>今日はあなたが生まれて何日目？</title>
+    <link href="./images/favicon.ico" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="js/countup.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript追加課題</h1>
+    </header>
+    <main id="main">
+        <section class="wrapper">
+            <h2>カウントアップタイマー</h2>
+            <div class="container">
+                <h2 id="msg_dft">あなたが生まれてからの日数を計算します</h2>
+                <div class="btn_area">
+                    <button type="button" id="input_btn">生年月日を入力する</button>
+                    <button type="reset" id="reset_btn">画面リセット</button>
+                </div>
+                <p id="err_msg" class="font_red "></p>
+                <p id="msg" class="timer hidden">今日はあなたが生まれた<br class="pc_hidden"><span id="birthday"></span></p>
+                <p class="timer"><span id="result"></span></p>
+                <p class="timer"><span id="surprise" class="font_red"></span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copy-write color_or">
+            <small>&copy; 2024 watabe's Room</small>
+        </div>
+    </footer>
+</body>
+
+</html>
