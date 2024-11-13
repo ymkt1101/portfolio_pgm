@@ -440,7 +440,7 @@ button:active {
 .preview_calendar {
     width: 260px;
     height: auto;
-    margin: 1rem auto;
+    margin: 0 auto;
 }
 
 /*----- footer -----*/
